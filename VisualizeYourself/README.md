@@ -1,4 +1,5 @@
 
+
 # Visualize Yourself Project
 
 Assigned Project Goals:
@@ -8,3 +9,11 @@ Assigned Project Goals:
 
 For more, see: https://technologyrediscovery.net/data/vis/mod-visualizeyourself.html
 
+#Initial Planning
+* Daily, solve the cube 25 times
+* Each day use different auditory stimulation (cycle through each type)
+* Three types of audio:
+    * White noise (or only ear plugs)
+    * Mozart (or general classical music)
+    * Metalcore (high BPM core music)
+ 
