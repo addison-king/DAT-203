@@ -9,7 +9,7 @@ Assigned Project Goals:
 
 For more, see: https://technologyrediscovery.net/data/vis/mod-visualizeyourself.html
 
-#Initial Planning
+# Initial Planning
 * Daily, solve the cube 25 times
 * Each day use different auditory stimulation (cycle through each type)
 * Three types of audio:
@@ -17,3 +17,12 @@ For more, see: https://technologyrediscovery.net/data/vis/mod-visualizeyourself.
     * Mozart (or general classical music)
     * Metalcore (high BPM core music)
  
+ # Factor Model
+ In order to account for variables in the experimental design, a "factor model" was created. This chart illustrates 4 different independent variables and 4 ways of controlling for them.
+ 
+ **Legend:**
+ ![enter image description here](https://github.com/brandyn-gilbert/DAT-203/blob/master/VisualizeYourself/Images/Legend.png?raw=true)
+ 
+**Factor Model:**
+![enter image description here](https://github.com/brandyn-gilbert/DAT-203/blob/master/VisualizeYourself/Images/Factor%20Model.png?raw=true)
+
