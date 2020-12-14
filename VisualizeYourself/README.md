@@ -34,9 +34,9 @@ After presenting to a group of peers, some changes were made to the overall proj
 The population sizes for these 3 categories are smaller than the original 3 due to time constraints.
 
 ## Analysis
+![enter image description here](https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/Hist_Small_Multiple.png)
 
-
-
+![enter image description here](https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/BoxPlot_Outliers.png)
 
 
 ## Conclusions
