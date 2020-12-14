@@ -34,12 +34,69 @@ After presenting to a group of peers, some changes were made to the overall proj
 The population sizes for these 3 categories are smaller than the original 3 due to time constraints.
 
 ## Analysis
-
+Analysis began by looking for patterns/normality with a histogram. A quick glance at the data would suggest that all forms of audio created normally distributed data. Knowing that they are all roughly normal, we can use these datasets further to see if there is statistical differences in them.
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/Hist_Small_Multiple.png" width="1000">
 
-
+To help us further visually analyze our data, we'll create a box and whisker plot. We can now see how spread the data is and where our medians lie in relation to each other. What stands out the most is that listening to nothing (Silence) performed worse than all other forms of audio stimuli. 
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/BoxPlot_Outliers.png" width="750">
 
+---
+The remaining question to answer: is silence statistically different from all other forms of audio? Can I say that listening to something (anything) is better than listening to nothing?
 
+To do this we will need establish a null hypothesis, an alternative hypothesis, and perform a T Test (independent samples).
+
+Using our Silence mean as our basis:
+H<sub>0</sub> : μ ≥ 28.843694 
+H<sub>1</sub> : μ < 28.843694
+
+Before a T Test is performed, a sample (n=75) of the data needs to be taken and the sample data needs to be checked for normality. If our sample is not normally distributed, a new sample needs to be taken:
+
+    sample_list = [metalcore_sample, classical_sample, silence_sample, tv_sample, audiobook_sample, country_sample]
+    j=0
+    for i in sample_list:
+        stat, p = stats.shapiro(i)
+        if p > .05:
+            print(labels[j],'good: p=%.3f' % (p))
+        else:
+            print(labels[j],'not good.')
+        j -=- 1
+
+    ## Output ##
+    Metalcore good: p=0.830
+    Classical good: p=0.184
+    Silence good: p=0.214
+    TV Show good: p=0.096
+    Audiobook good: p=0.071
+    Country good: p=0.077
+
+Knowing our sample data is normal, we will perform an independent sample T Test at different significance levels.
+
+### Confidence 95% (α = 0.05)
+| Genre | p-value | H<sub>0</sub> Result |
+|--|--|--|
+|Metalcore  |0.000000  |Reject H<sub>0</sub> |
+|Classical  | 0.000000 |Reject H<sub>0</sub>  |
+|TV Show  |0.000013  | Reject H<sub>0</sub> |
+|Audiobook  |0.006095  |Reject H<sub>0</sub>  |
+|Country  |0.040489  |Reject H<sub>0</sub>  |
+
+### Confidence 98% (α = 0.02)
+| Genre | p-value | H<sub>0</sub> Result |
+|--|--|--|
+|Metalcore  |0.000000  |Reject H<sub>0</sub> |
+|Classical  | 0.000000 |Reject H<sub>0</sub>  |
+|TV Show  |0.000013  | Reject H<sub>0</sub> |
+|Audiobook  |0.006095  |Reject H<sub>0</sub>  |
+|Country  |0.040489  |Fail to reject H<sub>0</sub>  |
+
+### Confidence 99.5% (α = 0.005)
+| Genre | p-value | H<sub>0</sub> Result |
+|--|--|--|
+|Metalcore  |0.000000  |Reject H<sub>0</sub> |
+|Classical  | 0.000000 |Reject H<sub>0</sub>  |
+|TV Show  |0.000013  | Reject H<sub>0</sub> |
+|Audiobook  |0.006095  |Fail to reject H<sub>0</sub>  |
+|Country  |0.040489  |Fail to reject H<sub>0</sub>  |
 
 ## Conclusions
+
