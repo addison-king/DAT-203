@@ -37,7 +37,9 @@ The population sizes for these 3 categories are smaller than the original 3 due 
 Analysis began by looking for patterns/normality with a histogram. A quick glance at the data would suggest that all forms of audio created normally distributed data. Knowing that they are all roughly normal, we can use these datasets further to see if there is statistical differences in them. \
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/Hist_Small_Multiple.png" width="1000">
 
-To help us further visually analyze our data, we'll create a box and whisker plot. We can now see how spread the data is and where our medians lie in relation to each other. What stands out the most is that listening to nothing (Silence) performed worse than all other forms of audio stimuli. \  
+To help us further visually analyze our data, we'll create a box and whisker plot. We can now see how spread the data is and where our medians lie in relation to each other. What stands out the most is that listening to nothing (Silence) performed worse than all other forms of audio stimuli.
+
+\
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/BoxPlot_Outliers.png" width="750">
 
 ---
