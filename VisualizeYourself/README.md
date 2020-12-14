@@ -30,8 +30,13 @@ Does auditory stimulus affect the speed of which I solve the rubik's cube?
 ![enter image description here](https://github.com/brandyn-gilbert/DAT-203/blob/master/VisualizeYourself/Images/Factor%20Model.png?raw=true)
 
 ##  Peer Evaluation (Revision)
-After presenting to a group of peers, some changes were made to the overall project. Audio stimulus was expanded to include a TV Show, an audiobook, and a disliked genre of music (Country).
-The population sizes for these 3 categories are smaller than the original 3 due to time constraints.
+After presenting to a group of peers, some changes were made to the overall project. Audio stimulus was expanded to include a TV Show, an audiobook, and a disliked genre of music (Country). \
+The population sizes for these 3 categories are smaller than the original 3 due to time constraints. \
+Datetime examinations were excluded from further analysis. No change in performance over time was found. No new moves or finger tricks were practiced during overall test.
+
+
+## Data Formatting
+(Public) Data is contained in separate .csv files, one for each audio condition. Inside the .csv is a column containing a sample (n=75) of values from the population (private) data. 
 
 ## Analysis
 Analysis began by looking for patterns/normality with a histogram. A quick glance at the data would suggest that all forms of audio created normally distributed data. Knowing that they are all roughly normal, we can use these datasets further to see if there is statistical differences in them. \
@@ -102,3 +107,9 @@ Knowing our sample data is normal, we will perform an independent sample T Test 
 
 ## Conclusions
 
+* Listening to something improves my solve times (confidence 95%). 
+* Listening to music I enjoy improves my solve time with greater confidence (99.5%).
+
+I believe that what my results are saying is that having background noise of your choosing improves focus. Even when I was listening to music I dislike (country), my times were still better than when I had silence. My hypothesis to explain this is that giving your auditory cortex something to focus on helps focus (rather than letting it pick up all the little sounds and try and analyze them).
+
+## To Future Students
