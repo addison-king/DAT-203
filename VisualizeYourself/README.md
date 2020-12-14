@@ -1,7 +1,7 @@
 # Visualize Yourself Project
 
 ## Abstract
-
+This project analyzes how auditory stimuli can have an effect on the performance of solving the Rubik's cube. To answer this question, I compared the solve rate performance while listening to 5 different audio sources to silence (being no active audio source). In order to account for external variables, minimization efforts included: regular bed times, no performance enhancing drugs (e.g. caffeine), brief meditation before a trial, and comfortable room temperature. My results showed a significant effect of solve rate when audio was used. Results also revealed listening to preferred audio sources have a more consistent effect. On this basis, using audio gives the auditory cortex a focal point thereby allowing greater focus to the task at hand.
 
 ##  Assigned Project Goals
 1.  Engage in a full-lifecycle data project (from planning through analysis and sharing) with highly relevant data: data about yourself!
@@ -113,6 +113,8 @@ Knowing our sample data is normal, we will perform an independent sample T Test 
 I believe that what my results are saying is that having background noise of your choosing improves focus. Even when I was listening to music I dislike (country), my times were still better than when I had silence. My hypothesis to explain this is that giving your auditory cortex something to focus on helps focus (rather than letting it pick up all the little sounds and try and analyze them).
 
 ## To Future Students
+I no longer enjoy solving the cube. What once was an escape/hobby had become a chore. Be wary of turning something you love into something you must do.
+
 
 ## Formatting Code (Graphs)
 ### Histogram
