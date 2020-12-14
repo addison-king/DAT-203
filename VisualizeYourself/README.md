@@ -42,111 +42,10 @@ Datetime examinations were excluded from further analysis. No change in performa
 Analysis began by looking for patterns/normality with a histogram. A quick glance at the data would suggest that all forms of audio created normally distributed data. Knowing that they are all roughly normal, we can use these datasets further to see if there is statistical differences in them. \
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/Hist_Small_Multiple.png" width="1000">
 
-    #FORMATTING CODE
-    hist_small_multiple = plt.figure(figsize=(14,8))
-    plt.suptitle('Rubik\'s Cube Solve Time by Auditory Stimuli', fontsize=16)
-    
-    ax1 = plt.subplot(231)
-    ax1.hist(metalcore_data, 20, histtype='step', color='black')
-    plt.xlabel('Metalcore\n (σ='+metalcore_stddev+')')
-    plt.yticks([])
-    plt.xlim([15, 41])
-    ax1.spines['top'].set_visible(False)
-    ax1.spines['left'].set_visible(False)
-    ax1.spines['right'].set_visible(False)
-    #
-    ax2 = plt.subplot(232)
-    ax2.hist(classical_data, 20, histtype='step', color='black')
-    plt.xlabel('Classical\n (σ='+classical_stddev+')')
-    plt.yticks([])
-    plt.xlim([15, 41])
-    ax2.spines['top'].set_visible(False)
-    ax2.spines['left'].set_visible(False)
-    ax2.spines['right'].set_visible(False)
-    #
-    ax3 = plt.subplot(233)
-    ax3.hist(silence_data, 20, histtype='step', color='black')
-    plt.xlabel('Silence\n (σ='+silence_stddev+')')
-    plt.yticks([])
-    plt.xlim([15, 41])
-    ax3.spines['top'].set_visible(False)
-    ax3.spines['left'].set_visible(False)
-    ax3.spines['right'].set_visible(False)
-    #
-    ax4 = plt.subplot(234)
-    ax4.hist(tv_data, 20, histtype='step', color='black')
-    plt.xlabel('TV Show\n (σ='+tv_stddev+')')
-    plt.yticks([])
-    plt.xlim([15, 41])
-    ax4.spines['top'].set_visible(False)
-    ax4.spines['left'].set_visible(False)
-    ax4.spines['right'].set_visible(False)
-    #
-    ax5 = plt.subplot(235)
-    ax5.hist(audiobook_data, 20, histtype='step', color='black')
-    plt.xlabel('Audiobook\n (σ='+audiobook_stddev+')')
-    plt.yticks([])
-    plt.xlim([15, 41])
-    ax5.spines['top'].set_visible(False)
-    ax5.spines['left'].set_visible(False)
-    ax5.spines['right'].set_visible(False)
-    #
-    ax6 = plt.subplot(236)
-    ax6.hist(country_data, 20, histtype='step', color='black')
-    plt.xlabel('Country\n (σ='+country_stddev+')')
-    plt.yticks([])
-    plt.xlim([15, 41])
-    ax6.spines['top'].set_visible(False)
-    ax6.spines['left'].set_visible(False)
-    ax6.spines['right'].set_visible(False)
-    
-    plt.tight_layout(w_pad=1.5, h_pad=1.0)
-
-
 To help us further visually analyze our data, we'll create a box and whisker plot. We can now see how spread the data is and where our medians lie in relation to each other. What stands out the most is that listening to nothing (Silence) performed worse than all other forms of audio stimuli.
 
 \
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/BoxPlot_Outliers.png" width="750">
-
-    #FORMATTING CODE
-    labels = ['Metalcore', 'Classical', 'Silence', 'TV Show', 'Audiobook', 'Country']
-    flierprops = dict(marker='.', markerfacecolor='black', markersize=2, linestyle='none')
-    medianprops = dict(marker='.', markerfacecolor='black', markeredgecolor='white', markersize=12, linestyle='none')
-    
-    fig, ax = plt.subplots(figsize=(8,6))
-    plt.ylabel('Seconds')
-    plt.title('Rubik\'s Cube Solve Time by Auditory Stimuli', fontsize=16)
-    plt.xlim([0, 1.75])
-    plt.ylim([15, 42])
-    
-    
-    ax.yaxis.set_ticks_position('none')
-    ax.xaxis.set_ticks_position('none')
-    ax.spines['top'].set_visible(False)
-    ax.spines['right'].set_visible(False)
-    ax.spines['left'].set_visible(False)
-    ax.spines['bottom'].set_visible(False)
-    
-    ax.boxplot(times[0], positions=[.25], labels=[labels[0]], widths=.001,
-               flierprops=flierprops, medianprops=medianprops, 
-               showbox=False, showcaps=False)
-    ax.boxplot(times[1], positions=[.5], labels=[labels[1]], widths=.001,
-               flierprops=flierprops, medianprops=medianprops, 
-               showbox=False, showcaps=False)
-    ax.boxplot(times[2], positions=[.75], labels=[labels[2]], widths=.001,
-               flierprops=flierprops, medianprops=medianprops, 
-               showbox=False, showcaps=False)
-    ax.boxplot(times[3], positions=[1], labels=[labels[3]], widths=.001,
-               flierprops=flierprops, medianprops=medianprops, 
-               showbox=False, showcaps=False)
-    ax.boxplot(times[4], positions=[1.25], labels=[labels[4]], widths=.001,
-               flierprops=flierprops, medianprops=medianprops, 
-               showbox=False, showcaps=False)
-    ax.boxplot(times[5], positions=[1.5], labels=[labels[5]], widths=.001,
-               flierprops=flierprops, medianprops=medianprops, 
-               showbox=False, showcaps=False)
-    
-    plt.tight_layout(w_pad=.5, h_pad=1.0)
 
 ---
 The remaining question to answer: is silence statistically different from all other forms of audio? Can I say that listening to something (anything) is better than listening to nothing?
@@ -214,3 +113,105 @@ Knowing our sample data is normal, we will perform an independent sample T Test 
 I believe that what my results are saying is that having background noise of your choosing improves focus. Even when I was listening to music I dislike (country), my times were still better than when I had silence. My hypothesis to explain this is that giving your auditory cortex something to focus on helps focus (rather than letting it pick up all the little sounds and try and analyze them).
 
 ## To Future Students
+
+## Formatting Code (Graphs)
+### Histogram
+
+    hist_small_multiple = plt.figure(figsize=(14,8))
+    plt.suptitle('Rubik\'s Cube Solve Time by Auditory Stimuli', fontsize=16)
+    
+    ax1 = plt.subplot(231)
+    ax1.hist(metalcore_data, 20, histtype='step', color='black')
+    plt.xlabel('Metalcore\n (σ='+metalcore_stddev+')')
+    plt.yticks([])
+    plt.xlim([15, 41])
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['left'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+    #
+    ax2 = plt.subplot(232)
+    ax2.hist(classical_data, 20, histtype='step', color='black')
+    plt.xlabel('Classical\n (σ='+classical_stddev+')')
+    plt.yticks([])
+    plt.xlim([15, 41])
+    ax2.spines['top'].set_visible(False)
+    ax2.spines['left'].set_visible(False)
+    ax2.spines['right'].set_visible(False)
+    #
+    ax3 = plt.subplot(233)
+    ax3.hist(silence_data, 20, histtype='step', color='black')
+    plt.xlabel('Silence\n (σ='+silence_stddev+')')
+    plt.yticks([])
+    plt.xlim([15, 41])
+    ax3.spines['top'].set_visible(False)
+    ax3.spines['left'].set_visible(False)
+    ax3.spines['right'].set_visible(False)
+    #
+    ax4 = plt.subplot(234)
+    ax4.hist(tv_data, 20, histtype='step', color='black')
+    plt.xlabel('TV Show\n (σ='+tv_stddev+')')
+    plt.yticks([])
+    plt.xlim([15, 41])
+    ax4.spines['top'].set_visible(False)
+    ax4.spines['left'].set_visible(False)
+    ax4.spines['right'].set_visible(False)
+    #
+    ax5 = plt.subplot(235)
+    ax5.hist(audiobook_data, 20, histtype='step', color='black')
+    plt.xlabel('Audiobook\n (σ='+audiobook_stddev+')')
+    plt.yticks([])
+    plt.xlim([15, 41])
+    ax5.spines['top'].set_visible(False)
+    ax5.spines['left'].set_visible(False)
+    ax5.spines['right'].set_visible(False)
+    #
+    ax6 = plt.subplot(236)
+    ax6.hist(country_data, 20, histtype='step', color='black')
+    plt.xlabel('Country\n (σ='+country_stddev+')')
+    plt.yticks([])
+    plt.xlim([15, 41])
+    ax6.spines['top'].set_visible(False)
+    ax6.spines['left'].set_visible(False)
+    ax6.spines['right'].set_visible(False)
+    
+    plt.tight_layout(w_pad=1.5, h_pad=1.0)
+
+### Boxplot
+    labels = ['Metalcore', 'Classical', 'Silence', 'TV Show', 'Audiobook', 'Country']
+    flierprops = dict(marker='.', markerfacecolor='black', markersize=2, linestyle='none')
+    medianprops = dict(marker='.', markerfacecolor='black', markeredgecolor='white', markersize=12, linestyle='none')
+    
+    fig, ax = plt.subplots(figsize=(8,6))
+    plt.ylabel('Seconds')
+    plt.title('Rubik\'s Cube Solve Time by Auditory Stimuli', fontsize=16)
+    plt.xlim([0, 1.75])
+    plt.ylim([15, 42])
+    
+    
+    ax.yaxis.set_ticks_position('none')
+    ax.xaxis.set_ticks_position('none')
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['left'].set_visible(False)
+    ax.spines['bottom'].set_visible(False)
+    
+    ax.boxplot(times[0], positions=[.25], labels=[labels[0]], widths=.001,
+               flierprops=flierprops, medianprops=medianprops, 
+               showbox=False, showcaps=False)
+    ax.boxplot(times[1], positions=[.5], labels=[labels[1]], widths=.001,
+               flierprops=flierprops, medianprops=medianprops, 
+               showbox=False, showcaps=False)
+    ax.boxplot(times[2], positions=[.75], labels=[labels[2]], widths=.001,
+               flierprops=flierprops, medianprops=medianprops, 
+               showbox=False, showcaps=False)
+    ax.boxplot(times[3], positions=[1], labels=[labels[3]], widths=.001,
+               flierprops=flierprops, medianprops=medianprops, 
+               showbox=False, showcaps=False)
+    ax.boxplot(times[4], positions=[1.25], labels=[labels[4]], widths=.001,
+               flierprops=flierprops, medianprops=medianprops, 
+               showbox=False, showcaps=False)
+    ax.boxplot(times[5], positions=[1.5], labels=[labels[5]], widths=.001,
+               flierprops=flierprops, medianprops=medianprops, 
+               showbox=False, showcaps=False)
+    
+    plt.tight_layout(w_pad=.5, h_pad=1.0)
