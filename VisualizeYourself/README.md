@@ -34,10 +34,11 @@ After presenting to a group of peers, some changes were made to the overall proj
 The population sizes for these 3 categories are smaller than the original 3 due to time constraints.
 
 ## Analysis
-Analysis began by looking for patterns/normality with a histogram. A quick glance at the data would suggest that all forms of audio created normally distributed data. Knowing that they are all roughly normal, we can use these datasets further to see if there is statistical differences in them.
+Analysis began by looking for patterns/normality with a histogram. A quick glance at the data would suggest that all forms of audio created normally distributed data. Knowing that they are all roughly normal, we can use these datasets further to see if there is statistical differences in them.\
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/Hist_Small_Multiple.png" width="1000">
 
-To help us further visually analyze our data, we'll create a box and whisker plot. We can now see how spread the data is and where our medians lie in relation to each other. What stands out the most is that listening to nothing (Silence) performed worse than all other forms of audio stimuli. 
+To help us further visually analyze our data, we'll create a box and whisker plot. We can now see how spread the data is and where our medians lie in relation to each other. What stands out the most is that listening to nothing (Silence) performed worse than all other forms of audio stimuli.\ 
+
 <img src="https://raw.githubusercontent.com/brandyn-gilbert/DAT-203/master/VisualizeYourself/Images/BoxPlot_Outliers.png" width="750">
 
 ---
@@ -45,8 +46,8 @@ The remaining question to answer: is silence statistically different from all ot
 
 To do this we will need establish a null hypothesis, an alternative hypothesis, and perform a T Test (independent samples).
 
-Using our Silence mean as our basis:
-H<sub>0</sub> : μ ≥ 28.843694 
+Using our Silence mean as our basis:\
+H<sub>0</sub> : μ ≥ 28.843694 \
 H<sub>1</sub> : μ < 28.843694
 
 Before a T Test is performed, a sample (n=75) of the data needs to be taken and the sample data needs to be checked for normality. If our sample is not normally distributed, a new sample needs to be taken:
